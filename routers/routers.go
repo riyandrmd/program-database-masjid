@@ -19,9 +19,11 @@ func (H HandlerStr) Routers() {
 	JdlUC := usecase.NewUsecase(Repository)
 	InvUC := usecase.NewUsecaseInv(Repository)
 	KtgUC := usecase.NewUsecaseKtg(Repository)
+	KmUC := usecase.NewUsecaseKm(Repository)
 
 	ep := H.R.Group("masjid")
 	handler.JwRouters(JdlUC, ep)
 	handler.InvRouters(InvUC, ep)
 	handler.KtgRouters(KtgUC, ep)
+	handler.KmRouters(KmUC, ep)
 }

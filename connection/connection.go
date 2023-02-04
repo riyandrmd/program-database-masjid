@@ -32,7 +32,7 @@ func ConnectToDb() *gorm.DB {
 		log.Fatal("Can't Connect To Database")
 	}
 
-	db.AutoMigrate(&models.JadwalSholat{}, &models.Ktg_Inventaris{}, &models.Inventaris{})
+	db.AutoMigrate(&models.JadwalSholat{}, &models.Ktg_Inventaris{}, &models.Inventaris{}, &models.InfaqMasuk{})
 	return db
 
 }

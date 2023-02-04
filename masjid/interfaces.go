@@ -51,3 +51,18 @@ type KtgUsecase interface {
 	UpdateKtg(c *gin.Context) error
 	DeleteKtg(c *gin.Context) error
 }
+
+// //////////////////////////////////////////////////////////////////////////////////////////
+type InfaqMasukRepo interface {
+	GetAllKM(c *gin.Context) ([]models.InfaqMasuk, error)
+	CreateKM(data models.InfaqMasuk) error
+	UpdateKM(data models.InfaqMasuk, param string) error
+	DeleteKM(param string) error
+}
+
+type InfaqMasukUsecase interface {
+	GetAllKM(c *gin.Context) ([]models.InfaqMasuk, error)
+	CreateKM(c *gin.Context) error
+	UpdateKM(c *gin.Context) error
+	DeleteKM(c *gin.Context) error
+}

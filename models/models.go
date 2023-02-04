@@ -24,3 +24,9 @@ type Ktg_Inventaris struct {
 	Nama_Ktg   string       `json:"nama_ktg"`
 	Inventaris []Inventaris `gorm:"foreignKey:Id_Ktg" constraint:"OnUpdate:CASCADE,OnDelete:SET NULL;" json:"inventaris"`
 }
+
+type InfaqMasuk struct {
+	Id_Infaq int64  `gorm:"primaryKey;autoIncreament;" json:"id_infaq"`
+	Tanggal  string `json:"tanggal"`
+	Jumlah   int64  `json:"jumlah"`
+}
